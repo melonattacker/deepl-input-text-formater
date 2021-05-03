@@ -10,17 +10,14 @@ chrome.contextMenus.create({
 function formatText(info, tab){
     return function(info, tab){
         const selection_text = info.selectionText;
-        var text_array = selection_text.split('.');
+        var text_array = selection_text.split('. ');
+        console.log(text_array);
         let formatted_text = "";
         for (let i = 0; i < text_array.length; i++) {
-            let sub_text;
-            if(i !== 0) {
-                sub_text = text_array[i].slice(1);
-                console.log(sub_text);
-            } else {
-                sub_text = text_array[i];
+            let sub_text = text_array[i];
+            if(i === text_array.length) {
+                sub_text += ".";
             }
-            sub_text += ".";
             sub_text += "\n";
             formatted_text += sub_text;
         }
