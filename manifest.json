@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "DeepL Input Text Formatter",
+    "description": "DeepL Input Text Formatter",
+    "version": "1.0",
+    "background" : {
+     "scripts" : ["background.js"]
+   },
+    "permissions" : [
+      "contextMenus",
+      "clipboardRead"
+    ],
+    "icons" : {
+      "48" : "icons/file_icon_text_pdf.png"
+    }
+}
