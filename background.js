@@ -11,11 +11,10 @@ function formatText(info, tab){
     return function(info, tab){
         const selection_text = info.selectionText;
         var text_array = selection_text.split('. ');
-        console.log(text_array);
         let formatted_text = "";
         for (let i = 0; i < text_array.length; i++) {
             let sub_text = text_array[i];
-            if(i === text_array.length) {
+            if(i !== text_array.length-1) {
                 sub_text += ".";
             }
             sub_text += "\n";
