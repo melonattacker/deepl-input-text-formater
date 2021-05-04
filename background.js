@@ -20,6 +20,15 @@ function formatText(info, tab){
             sub_text += "\n";
             formatted_text += sub_text;
         }
-        alert(formatted_text);
+        saveToClipboard(formatted_text);
     }
+}
+
+function saveToClipboard(str) {
+    var textArea = document.createElement("textarea");
+    document.body.appendChild(textArea);
+    textArea.value = str;
+    textArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textArea);
 }

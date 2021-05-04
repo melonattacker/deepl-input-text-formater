@@ -7,8 +7,7 @@
      "scripts" : ["background.js"]
    },
     "permissions" : [
-      "contextMenus",
-      "clipboardRead"
+      "contextMenus"
     ],
     "icons" : {
       "48" : "icons/file_icon_text_pdf.png"
